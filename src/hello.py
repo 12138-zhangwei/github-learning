@@ -1,11 +1,12 @@
-"""A minimal first Python program."""
+"""A minimal interactive Python program."""
 
 
 def greet(name: str) -> str:
     """Return a friendly greeting."""
-    return f"Hello, {name}! Welcome to programming."
+    clean_name = name.strip() or "GitHub"
+    return f"Hello, {clean_name}! Welcome to programming."
 
 
 if __name__ == "__main__":
-    print(greet("GitHub"))
-
+    user_name = input("What is your name? ")
+    print(greet(user_name))
